@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "circulo"
+version = "0.1.0"
+description = "Skill trees an agent has to earn, and can lose: mastery read from evidence rather than granted."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Jordi Figueras Casas" }]
+keywords = ["agents", "llm", "skill-library", "mastery", "learning",
+            "curriculum", "self-improvement", "sgicp"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/umgul/circulo"
+Issues = "https://github.com/umgul/circulo/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/circulo"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/circulo/py.typed" = "circulo/py.typed"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

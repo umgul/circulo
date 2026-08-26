@@ -1,0 +1,27 @@
+{
+  "name": "circulo-and-varas",
+  "description": "Two small, dependency-free pieces of an agent's self-model. `varas` answers «what is normal for me?»; `circulo` answers «what have I actually learned?». Either works alone; together an agent can hold both at once.",
+  "owner": {
+    "name": "Jordi Figueras Casas",
+    "url": "https://github.com/umgul"
+  },
+  "plugins": [
+    {
+      "name": "circulo",
+      "description": "Skill trees an agent has to earn and can lose: mastery read from accumulated evidence rather than granted, with decay of unused fluency and a visible record of who judged.",
+      "category": "productivity",
+      "source": "./",
+      "homepage": "https://github.com/umgul/circulo"
+    },
+    {
+      "name": "varas",
+      "description": "Give your agent its own normals: thresholds calibrated against its own measured history instead of hand-picked constants. Detects when a channel's regime has changed.",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/umgul/varas.git"
+      },
+      "homepage": "https://github.com/umgul/varas"
+    }
+  ]
+}

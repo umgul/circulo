@@ -1,0 +1,16 @@
+{
+  "name": "circulo",
+  "version": "0.1.0",
+  "description": "Skill trees an agent has to earn and can lose: mastery read from accumulated evidence rather than granted, with decay of unused fluency and a visible record of who judged.",
+  "author": {
+    "name": "Jordi Figueras Casas"
+  },
+  "homepage": "https://github.com/umgul/circulo",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agents",
+    "llm",
+    "sgicp",
+    "skill-library"
+  ]
+}
