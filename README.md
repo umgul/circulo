@@ -196,10 +196,27 @@ was only supposed to be told about.
 
 ## Use as a Claude skill
 
-`skills/circulo/SKILL.md` is ready to use. Copy it into `.claude/skills/circulo/`
-in your project (or `~/.claude/skills/circulo/` for every project) and Claude
-will reach for it when a task involves tracking what an agent has learned or
-deciding whether it is qualified for something.
+Two ways, both free.
+
+**As a plugin** — typed inside Claude Code, in the chat, not in a terminal:
+
+```
+/plugin marketplace add umgul/circulo
+/plugin install circulo
+```
+
+That marketplace lists both `varas` and `circulo`, so the other one is right
+there if you want it.
+
+**By hand**, which works anywhere:
+
+```bash
+git clone https://github.com/umgul/circulo.git
+cp -r circulo/skills/circulo ~/.claude/skills/          # every project
+# or: cp -r circulo/skills/circulo .claude/skills/      # just this one
+```
+
+Either way, Claude reaches for it when a task involves tracking what an agent has learned, or deciding whether it is qualified for something.
 
 ## Use as a module
 

@@ -215,10 +215,28 @@ else:
 
 ## Como skill de Claude
 
-En `skills/circulo/SKILL.md` hay uno listo. Cópialo a `.claude/skills/circulo/` en tu
-proyecto (o a `~/.claude/skills/circulo/` para todos) y Claude lo usará cuando
-la tarea toque seguir lo que un agente ha aprendido o decidir si está
-capacitado para algo.
+Dos vías, las dos gratis.
+
+**Como plugin** — se escribe dentro de Claude Code, en el chat, no en una
+terminal:
+
+```
+/plugin marketplace add umgul/circulo
+/plugin install circulo
+```
+
+Ese marketplace lista `varas` y `circulo`, así que el otro queda ahí al lado
+por si lo quieres.
+
+**A mano**, que funciona en cualquier sitio:
+
+```bash
+git clone https://github.com/umgul/circulo.git
+cp -r circulo/skills/circulo ~/.claude/skills/          # para todos los proyectos
+# o: cp -r circulo/skills/circulo .claude/skills/       # sólo para este
+```
+
+En cualquiera de las dos, Claude la usará cuando una tarea toque seguir lo que un agente ha aprendido, o decidir si está capacitado para algo.
 
 ## Como módulo
 
